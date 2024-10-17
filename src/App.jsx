@@ -3,16 +3,45 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './todo'
+import Actor from './Actor'
+import Singer from './singer'
+import Books from './bookStore'
 
 function App() {
   const [count, setCount] = useState(0)
+  const citys = ['vages', 'dhaka', 'newYork', 'caliafornia', 'san diego']
+  const singers = [
+    {id: 1, name: "ayub bacchu", age: 52}, 
+    {id: 2, name: "jems", age: 60},
+    {id: 3, name: 'pritom', age: 28}
+  ]
 
+  const books = [
+    {id: 1, name: "Physics", price: 100},
+    {id: 1, name: "Higher Math", price: 120},
+    {id: 1, name: "Chemistry", price: 130},
+    {id: 1, name: "Biology", price: 200},
+  ]
   return (
+
     <>
       <h1>Vite + React</h1>
-      <Todo task = 'explore react' isDone = {true}></Todo>
+      <Books books ={books}></Books>
+
+      {
+        singers.map(singer => <Singer singer={singer}></Singer>)
+      }
+
+     <Actor name= {"vegas"}></Actor>
+     {
+      citys.map(city => <Actor name={city}> </Actor>)
+     }
+
+
+
+      {/* <Todo task = 'explore react' isDone = {true}></Todo>
       <Todo task = 'explore react core concept' isDone = {false}></Todo>
-      <Todo task = 'Try Jsx' isDone = {true}></Todo>
+      <Todo task = 'Try Jsx' isDone = {true}></Todo> */}
       {/* <Func></Func>
       <Func></Func>
       <Func></Func>

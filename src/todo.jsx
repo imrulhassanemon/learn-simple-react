@@ -38,9 +38,18 @@ export default
 // }
 
 
-// function rendering option 4: (and &&)
+// conditional rendering option 4: (and &&)
+// function Todo({task, isDone}){
+//     return (
+//         <li>{task} {isDone && ': Done'}</li>
+//     )
+// }
+
+
+
+// conditional rendering option 5: (or || )
 function Todo({task, isDone}){
     return (
-        <li>{task} {isDone && ': Done'}</li>
+        <li>{task} {isDone || ": practice dud"}</li>
     )
 }
